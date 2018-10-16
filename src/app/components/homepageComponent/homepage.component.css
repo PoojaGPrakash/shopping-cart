@@ -1,0 +1,33 @@
+.homepage .carousel-inner img {
+  width: 100%;
+  height: 400px;
+  max-height: 400px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+.homepage .carousel-caption {
+    color: #000;
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 0;
+    text-shadow: 2px 2px #ccc;
+}
+.homepage .carousel-control.left {
+  background: linear-gradient(to right,#8a8a8a 0,rgba(0,0,0,.0001) 100%);
+}
+.homepage .carousel-control.right {
+  background: linear-gradient(to right,rgba(0,0,0,.0001) 0,#8a8a8a 100%);
+}
+.homepage .carousel {
+  background: #1ab2ff;
+}
+.homepage .homepageContent {
+    padding: 20px;
+}
+.badge {
+    float: right;
+    padding: 5px 7px;
+    border-radius: 12px;
+}

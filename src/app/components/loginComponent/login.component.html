@@ -1,0 +1,42 @@
+<h3 class="text-center">Login</h3>
+
+<div class="container-fluid login marginbtm50">
+	<form #loginForm="ngForm" (ngSubmit)="onLoginClick(loginForm.value)">
+		<div class="col-md-5 login-maindiv">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="email">Email:</label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" id="email" placeholder="Enter email" [(ngModel)]="email" name="email" required="required" pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" #emailError="ngModel" />
+        <!--
+          <span class="error" *ngIf="emailError.invalid && emailError.touched && emailError.errors.required"> <small>Email can't be blank </small> </span>
+          <span class="error" *ngIf="emailError.invalid && emailError.touched && emailError.errors.pattern"><small> Email is invalid </small> </span>
+          -->
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="pwd">Password:</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" id="pwd" placeholder="Enter password" [(ngModel)]="password" name="password" required="required" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15})" #passwordError="ngModel"/>
+       <!--   <span class="error" *ngIf="passwordError.invalid && passwordError.touched && passwordError.errors.required"> <small> Password can't be blank </small> </span>
+          <span class="error" *ngIf="passwordError.invalid && passwordError.touched && passwordError.errors.pattern"><small> Password is invalid</small> </span>
+          -->
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<div class="checkbox">
+						<label><input type="checkbox" name="rememberme"/> Remember me</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+			<div>
+				<small class="error">{{status}}</small>
+			</div>
+		</div>
+	</form>
+</div>

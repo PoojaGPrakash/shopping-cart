@@ -1,0 +1,66 @@
+<div class="container-fluid pad0 marginbtm50 homepage">
+	<div id="homepageCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#homepageCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#homepageCarousel" data-slide-to="1"></li>
+			<li data-target="#homepageCarousel" data-slide-to="2"></li>
+		</ol>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="{{imgUrl1}}" alt="Power Of Learning" />
+				<div class="carousel-caption">
+					<h3>Power Of Learning</h3>
+				</div>
+			</div>
+			<div class="item">
+				<img src="{{imgUrl2}}" alt="Frontend technologies" />
+				<div class="carousel-caption">
+					<h3>Frontend technologies</h3>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="{{imgUrl3}}" alt="Responsive Designs" />
+				<div class="carousel-caption">
+					<h3>Responsive Designs</h3>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#homepageCarousel" data-slide="prev"></a>
+		<a class="right carousel-control" href="#homepageCarousel" data-slide="next"></a>
+	</div>
+	<div class="container homepageContent">
+		<div class="col-md-8 homeDetails">
+			<h3>
+				{{ title }}
+			</h3>
+			<h5>
+				<b>
+				{{ subheadinghomepage }}
+        </b>
+			</h5>
+			<p>
+				{{somedata | summary}}
+			</p>
+			<p>
+				{{text | summary: 100 }}
+			</p>
+      <!-- <ng-content></ng-content> -->
+		</div>
+		<div class="col-md-4 homeLinks">
+			<h3>
+				Courses We Provide
+			</h3>
+			<ul class="list-group">
+				<li class="list-group-item" *ngFor="let course of courses">
+					{{course | uppercase }}
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

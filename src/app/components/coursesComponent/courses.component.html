@@ -1,0 +1,25 @@
+<div class="container-fluid marginbtm50">
+	<div class="courseList-mainDiv">
+		<div class="coursesList col-md-12">
+			<h3 class="alldbest col-md-10">All The Best !!</h3>
+			<div class="col-md-2 cartbtn">
+				<button class="btn btn-primary" routerLink="cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart </button>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="coursesCard col-md-3" *ngFor="let courseDetail of storeItems">
+					<div>
+						<h4>
+							<a href="#">{{courseDetail.name}}</a>
+						</h4>
+						<h4>Price:{{courseDetail.price | currency }}</h4>
+						<div class="wordWrap">{{courseDetail.description | summary : 70 }}</div>
+					</div>
+					<div>
+						<button type="button" class="btn btn-default" (click)="addItemInCart(courseDetail.id)">Add to Cart</button>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+<router-outlet></router-outlet>
